@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>asdfghj</title></head>
+<style>body{background-color: rgb(132, 11, 212);}
+ .NavigationBar{
+display:inline-grid;
+grid-template-columns: auto auto auto auto auto;
+padding: 15px;
+}
+.NavigationElement{
+background-color: black;
+border: 20px ridge rgb(29, 21, 44);
+padding: 12px;
+font-size: 20px;
+}
+h2{color:gold;}
+a:link{ color: rgb(240, 11, 3);}
+table{background-color: black; color: gold; border: 25px solid rgb(29, 21, 44);}
+tr:hover{background-color: palevioletred;}
+th{text-decoration: crimson;}
+input{background-color: black; font-style: italic; color: gold;}
+form{font-size: 6mm; }
+img{border-style: double; border-color: beige;}
+</style>
+<body text="black" >
+<center>
+<div class="NavigationBar">
+<div class="NavigationElement"><a href="index.html" target="_blank" >Home</a></div>
+<div class="NavigationElement"><a href="About.html" target="_blank">About</a></div>
+<div class="NavigationElement"><a href="login_html_page.html" target="_blank">Register</a></div>
+<div class="NavigationElement"><a href="Contact.html" target="_blank" class="active">Contact</a></div>
+</div>
+</center>
+<a href="index.html" target="_blank"><img src="gold_gm.png" alt="Shubham" width="90"></a><br><br><br><br><br><br><br><br><br><br>
+<center>
+<h2>Register</h2>
+<form action="login.php" method="post">
+<table>
+<tr><th>Username</th><th><input type="text" name="user" placeholder="Name :"></th></tr>
+<tr><th>Password</th><th><input type="password" name="user" placeholder="password: "></th></tr>
+<tr><th><input type="Submit" name="submit" value="Login"></th>
+    <th><a href="index.html">Forget Password?</a></th></tr>
+</table></form></center>
+</body></html>
