@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .NavigationBar{
+            display:inline-grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding: 15px;
+        }
+        .NavigationElement{
+            background-color: rgb(8, 0, 0);
+            border: 20px ridge rgb(29, 21, 44);
+            padding: 12px;
+            font-size: 20px;
+        }
+        a:hover{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: hotpink;
+        }
+        /* a:link{
+            color: red;            
+        } */
+        a{color: Gold;}
+        div.mid1{
+            display: block;
+            width: 20%;
+            margin: 29px auto;
+            background-color: black;
+            color: red;
+            padding: 10px;
+        }
+        div.mid{
+            display: block;
+            width: 36%;
+            margin: 29px auto;
+            background-color: black;
+            color: Gold;
+            border: 15px solid rgb(29, 21, 44);
+            padding: 15px;
+            opacity: 0.7;
+        }
+        div.left{
+            background-color: black;
+            display: inline-block;
+            border: 15px solid rgb(29, 21, 44);
+            padding: 45px;
+            position: absolute;
+            opacity: 0.7;
+            left: 20px;
+            top: 180px;
+        }
+        div.right{
+            background-color: black;
+            display: inline-block;
+            top: 190px;
+            right: 15px ;
+            padding: 35px;
+            position: absolute;
+            border: 15px solid rgb(29, 21, 44);
+        }
+        div.RightElement{background-color: black; 
+            /* border: 5px solid rgb(29, 21, 44); */
+            color: Gold;
+        }
+        div.LeftElement{background-color: black;
+            border: 5px solid rgb(29, 21, 44);
+            color: Gold;
+        }
+        input{background-color: black; color: Gold;}
+        button{background-color: black;
+            color: palevioletred;
+            font-size: 15px;
+            font-family: monospace;
+        }
+        .open-button {
+            background-color: lightpink;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.7;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+            }
+        .form-popup {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+                border: 3px solid Gold;
+                z-index: 9;
+        }
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: rgb(8, 0, 0);
+            color: Gold;
+        }
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 90%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: rgb(29, 21, 44);
+        }
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: black;
+            color: azure;
+            outline: none;
+        }
+        .form-container .btn {
+            background-color: hotpink;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+        .form-container .cancel {
+            background-color: blueviolet;
+        }
+        .form-container .btn:hover, .open-button:hover, .left:hover, .mid:hover {
+            opacity: 1;
+        }
+        label{color: Gold;}
+    </style>
+    <body background="shubham1.jpg">
+        <script type="text/javascript">
+            alert("Welcome to Shubham ka GYM")
+            function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            }
+            </script> 
+        <img src="Gold_gm.png" alt="Gold gym" width="100px">
+        <center>
+        <div class="NavigationBar">
+            <!-- <div class="NavigationElement"></div> -->
+            <div class="NavigationElement"><a href="index.html" target="_blank" class="active">Home</a></div>
+            <div class="NavigationElement"><a href="login_html_page.html" target="_blank">Register</a></div>
+            <div class="NavigationElement"><a href="Fitness.html" target="_blank">Fitness Centers</a></div>
+            <div class="NavigationElement"><a href="Contact.html" target="_blank">Contact</a></div>
+            <button class="open-button" onclick="openForm()">Open Form</button>
+
+            <div class="form-popup" id="myForm">
+                <form class="form-container">
+                <h1>Login</h1>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <div class="RightElement"><u><b>Packages</b></u></div>
+            <div class="RightElement"><b>Bronze</b></div>
+            <div class="RightElement"><b>Silver</b></div>
+            <div class="RightElement"><b>Gold</b></div>
+            <div class="RightElement"><b>Platinum</b></div>
+        </div>
+        <div class="left">
+            <div class="LeftElement"><b>Locations</b></div>
+            <div class="LeftElement"><iframe src="https://www.facebook.com/Goldsgym.varanasi/">Facebook</iframe></div>
+            <div class="LeftElement"><iframe src="https://www.google.com/maps/place/Gold's+Gym/@31.3066124,75.5768922,20.11z/data=!4m5!3m4!1s0x391a5baae25572cb:0x7f5d5f0b435b45a5!8m2!3d31.3066247!4d75.5770741" title="Gold's Gym Jalandhar">
+            </iframe></div>
+            <div class="LeftElement"><iframe src="https://goo.gl/maps/sHVJhmzuL2SZQf6w7" title="Gold's Gym Ludhiana">
+            </iframe></div>
+            <div class="LeftElement"><iframe title="Gold's Gym" src="https://goo.gl/maps/6AugP6wdZWfZpTASA">
+            </iframe></div>  
+        </div>
+        <div class="mid1">
+            <marquee scrollamount="15">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold-gym1.png" alt="Gold's gym 1" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold-s-gym-11037118-63f1eac9.jpeg" alt="Gold gym 2" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold's-gym3.jpg" alt="Gold gym 3" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold's-gym4.jpg" alt="Gold gym 4" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold's-gym5.jpg" alt="Gold gym 5" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\Gold's-gym6.jpg" alt="Gold's-gym6" height="150px">
+                <img src="C:\Users\acer\Desktop\ \Gold-gym-website\602478-Gold-gym-081917.jpg" alt="Gold's-gym7" height="150px">
+                <!-- <img src="" alt="Gold's-gym8" height="150px">
+                <img src="" alt="Gold's-gym9" height="150px"> -->
+            </marquee>
+        </div>
+        <!-- <hr> -->
+        <div>
+            <div class="mid"><h1><b>Gold's GYM Subscribe</b></h1>
+            <form>
+                <input type="text" name="info" placeholder="Enter your Name"><br>
+                <input type="text" name="info" placeholder="Enter your Package"><br>
+                <input type="text" name="info" placeholder="Enter your Email"><br>
+                <input type="text" name="info" placeholder="Enter your Location"><br>
+                <input type="text" name="info" placeholder="Enter your Phone Number"><br>
+                <input type="submit"><br>
+            </form>
+            </div>
+        </div>
+        </center>
+        
+        
+    </body>
+</html>
